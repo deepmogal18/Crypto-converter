@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Crypto Currency Converter</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <h1>Live Crypto Currency Converter</h1>
+
+  <div class="container">
+    <div class="converter">
+      <input type="number" id="amount" placeholder="Enter amount" />
+      <select id="crypto">
+        <option value="bitcoin">Bitcoin (BTC)</option>
+        <option value="ethereum">Ethereum (ETH)</option>
+        <option value="ripple">Ripple (XRP)</option>
+        <option value="litecoin">Litecoin (LTC)</option>
+        <option value="cardano">Cardano (ADA)</option>
+      </select>
+      <select id="currency">
+        <option value="usd">USD</option>
+        <option value="eur">EUR</option>
+        <option value="inr">INR</option>
+        <option value="gbp">GBP</option>
+        <option value="jpy">JPY</option>
+      </select>
+      <button onclick="convertCrypto()">Convert</button>
+      <div class="result" id="result"></div>
+    </div>
+
+    <div class="history-section">
+      <h2>7-Day Price History</h2>
+      <canvas id="priceHistoryChart"></canvas>
+    </div>
+
+    <div class="trending-section">
+      <h2>Trending Cryptos</h2>
+      <div id="trending-cryptos"></div>
+    </div>
+
+    <div class="news-section">
+      <h2>Crypto Market News</h2>
+      <ul id="crypto-news"></ul>
+    </div>
+  </div>
+
+  <div class="footer">Data powered by multiple APIs</div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
